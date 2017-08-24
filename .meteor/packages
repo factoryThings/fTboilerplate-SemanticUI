@@ -19,6 +19,3 @@ shell-server@0.2.4            # Server-side component of the `meteor shell` comm
 
 react-meteor-data@0.2.6-beta.16
 accounts-password@1.4.0
-aldeed:collection2-core
-aldeed:schema-deny
-aldeed:schema-index
