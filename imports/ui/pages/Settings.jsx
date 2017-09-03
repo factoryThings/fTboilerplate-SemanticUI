@@ -1,13 +1,13 @@
 import React from 'react';
 import { Header, Image } from 'semantic-ui-react';
 
-class Example extends React.Component {
+class Settings extends React.Component {
   render() {
     return (
       <Header as="h2" textAlign="center">
-        <Image src="/ftlogo.png" /> Example
+        <Image src="/ftlogo.png" /> Settings
       </Header>
     );
   }
 }
-export default Example;
+export default Settings;

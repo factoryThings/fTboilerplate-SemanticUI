@@ -1,12 +1,12 @@
 // login page overrides the form’s submit event and call Meteor’s loginWithPassword()
 // Authentication errors modify the component’s state to be displayed
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, Redirect } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
 import { Container, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react';
 
-export default class Signin extends Component {
+export default class Signin extends React.Component {
   constructor(props) {
     super(props);
     this.state = { email: '', password: '', error: '', redirectToReferer: false };
