@@ -5,7 +5,8 @@ class NotFound extends React.Component {
   render() {
     return (
       <Header as="h2" textAlign="center">
-        <Image src="/ftlogo.png" /> Page not found
+        <Image src="/ftlogo.png" />
+        <p>Page not found</p>
       </Header>
     );
   }

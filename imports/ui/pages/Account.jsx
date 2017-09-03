@@ -5,7 +5,8 @@ class Account extends React.Component {
   render() {
     return (
       <Header as="h2" textAlign="center">
-        <Image src="/ftlogo.png" /> Account
+        <Image src="/ftlogo.png" />
+        <p>Account</p>
       </Header>
     );
   }

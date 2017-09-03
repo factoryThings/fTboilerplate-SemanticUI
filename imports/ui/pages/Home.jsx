@@ -5,7 +5,8 @@ class Home extends React.Component {
   render() {
     return (
       <Header as="h2" textAlign="center">
-        <Image src="/ftlogo.png" /> Home
+        <Image src="/ftlogo.png" />
+        <p>Home</p>
       </Header>
     );
   }
