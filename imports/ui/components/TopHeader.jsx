@@ -17,13 +17,10 @@ class TopHeader extends React.Component {
           Example
         </Menu.Item>
         <Menu.Item as={NavLink} activeClassName="active" exact to="/signin">
-          Signin
+          Sign In
         </Menu.Item>
         <Menu.Item as={NavLink} activeClassName="active" exact to="/signup">
-          Signup
-        </Menu.Item>
-        <Menu.Item as={NavLink} activeClassName="active" exact to="/signout">
-          Logout
+          Sign Up
         </Menu.Item>
         <Menu.Item as={NavLink} activeClassName="active" exact to="/bad-url">
           Not Found Page
@@ -51,7 +48,7 @@ TopHeader.propTypes = {
 export default withRouter(
   createContainer(
     () => ({
-      currentUser: Meteor.user() ? Meteor.user().username : '?',
+      currentUser: Meteor.user() ? Meteor.user().username : 'Please Sign In',
     }),
     TopHeader
   )
