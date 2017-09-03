@@ -26,13 +26,22 @@ class TopHeader extends React.Component {
           Not Found Page
         </Menu.Item>
         <Menu.Item position="right">
-          <Dropdown text={this.props.currentUser} pointing="top right" icon={'user'}>
-            <Dropdown.Menu>
-              <Dropdown.Item icon='user' text='Account' as={NavLink} exact to='/account'/>
-              <Dropdown.Item icon='settings' text='Settings' as={NavLink} exact to='/settings'/>
-              <Dropdown.Item icon='sign out' text='Sign Out' as={NavLink} exact to='/signout'/>
-            </Dropdown.Menu>
-          </Dropdown>
+          {this.props.currentUser === '' ? (
+            <Dropdown text="Please Sign In" pointing="top right" icon={'user'}>
+              <Dropdown.Menu>
+                <Dropdown.Item icon="user" text="Sign In" as={NavLink} exact to="/signin" />
+                <Dropdown.Item icon="add user" text="Sign Up" as={NavLink} exact to="/signup" />
+             </Dropdown.Menu>
+            </Dropdown>
+          ) : (
+            <Dropdown text={this.props.currentUser} pointing="top right" icon={'user'}>
+              <Dropdown.Menu>
+                <Dropdown.Item icon="user" text="Account" as={NavLink} exact to="/account" />
+                <Dropdown.Item icon="settings" text="Settings" as={NavLink} exact to="/settings" />
+                <Dropdown.Item icon="sign out" text="Sign Out" as={NavLink} exact to="/signout" />
+              </Dropdown.Menu>
+            </Dropdown>
+          )}
         </Menu.Item>
       </Menu>
     );
@@ -48,7 +57,7 @@ TopHeader.propTypes = {
 export default withRouter(
   createContainer(
     () => ({
-      currentUser: Meteor.user() ? Meteor.user().username : 'Please Sign In',
+      currentUser: Meteor.user() ? Meteor.user().username : '',
     }),
     TopHeader
   )
