@@ -7,7 +7,6 @@ import { Menu, Dropdown } from 'semantic-ui-react';
 
 class TopHeader extends React.Component {
   render() {
-    console.log('user:', Meteor.user());
     return (
       <Menu secondary pointing>
         <Menu.Item as={NavLink} activeClassName="active" exact to="/">
