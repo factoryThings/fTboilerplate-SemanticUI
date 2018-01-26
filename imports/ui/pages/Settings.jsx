@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Image } from 'semantic-ui-react';
+import { Header, Image } from 'antd';
 
 class Settings extends React.Component {
   render() {

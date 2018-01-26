@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, Redirect } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
-import { Container, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react';
+import { Container, Form, Grid, Header, Image, Message, Segment } from 'antd';
 
 export default class Signin extends React.Component {
   constructor(props) {
@@ -76,13 +76,11 @@ export default class Signin extends React.Component {
             <Message>
               <Link to="/signup">Click here to Register</Link>
             </Message>
-            {this.state.error === ''
-              ? ''
-              : <Message
-                  error
-                  header="Login was not successful"
-                  content={this.state.error}
-                />}
+            {this.state.error === '' ? (
+              ''
+            ) : (
+              <Message error header="Login was not successful" content={this.state.error} />
+            )}
           </Grid.Column>
         </Grid>
       </Container>

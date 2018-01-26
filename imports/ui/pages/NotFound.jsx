@@ -1,15 +1,5 @@
-import React from 'react';
-import { Header, Image } from 'semantic-ui-react';
+import React from 'react'
 
-class NotFound extends React.Component {
-  render() {
-    return (
-      <Header as="h2" textAlign="center">
-        <Image src="/ftlogo.png" />
-        <p>Page not found</p>
-      </Header>
-    );
-  }
-}
+const NotFound = () => <p>Page not found</p>
 
-export default NotFound;
+export default NotFound

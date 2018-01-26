@@ -1,1 +1,2 @@
-import './routes.jsx';
+import './theme.less'
+import './routes.jsx'
