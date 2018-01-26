@@ -5,7 +5,15 @@
 // Authentication errors modify the component’s state to be displayed
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react';
+import {
+  Container,
+  Form,
+  Grid,
+  Header,
+  Image,
+  Message,
+  Segment,
+} from 'semantic-ui-react';
 import { Accounts } from 'meteor/accounts-base';
 
 export default class Signup extends React.Component {
@@ -69,13 +77,15 @@ export default class Signup extends React.Component {
             <Message>
               Already have an account? Login <Link to="/signin">here</Link>
             </Message>
-            {this.state.error === ''
-              ? ''
-              : <Message
-                  error
-                  header="Registration was not successful"
-                  content={this.state.error}
-                />}
+            {this.state.error === '' ? (
+              ''
+            ) : (
+              <Message
+                error
+                header="Registration was not successful"
+                content={this.state.error}
+              />
+            )}
           </Grid.Column>
         </Grid>
       </Container>

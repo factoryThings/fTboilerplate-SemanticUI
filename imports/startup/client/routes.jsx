@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { render } from 'react-dom';
 import { Meteor } from 'meteor/meteor';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
 
 // This is the default semantic css but can be replaced by a customized version
 import 'semantic-ui-css/semantic.css';
@@ -35,7 +40,7 @@ Meteor.startup(() => {
         </Switch>
       </div>
     </Router>,
-    document.getElementById('root')
+    document.getElementById('root'),
   );
 });
 
