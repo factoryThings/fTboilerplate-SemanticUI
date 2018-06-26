@@ -7,6 +7,7 @@ class Example extends React.Component {
       <Header as="h2" textAlign="center">
         <Image src="/ftlogo.png" />
         <p>Example</p>
+        <p>(Only visible when logged in.)</p>
       </Header>
     );
   }

@@ -40,7 +40,7 @@ Meteor.startup(() => {
         </Switch>
       </div>
     </Router>,
-    document.getElementById('root'),
+    document.getElementById('root')
   );
 });
 
