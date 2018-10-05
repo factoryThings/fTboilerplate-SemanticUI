@@ -1,27 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { render } from 'react-dom';
-import { Meteor } from 'meteor/meteor';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from 'react-router-dom';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { render } from 'react-dom'
+import { Meteor } from 'meteor/meteor'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
 // This is the default semantic css but can be replaced by a customized version
-import 'semantic-ui-css/semantic.css';
+import 'semantic-ui-css/semantic.css'
 
 // Public components
-import TopHeader from '../..//ui/components/TopHeader.jsx';
-import Home from '../../ui/pages/Home.jsx';
-import Example from '../../ui/pages/Example.jsx';
-import Settings from '../../ui/pages/Settings.jsx';
-import Account from '../../ui/pages/Account.jsx';
-import NotFound from '../../ui/pages/NotFound.jsx';
-import Signin from '../../ui/pages/Signin.jsx';
-import Signup from '../../ui/pages/Signup.jsx';
-import Signout from '../../ui/pages/Signout.jsx';
+import TopHeader from '../../ui/components/TopHeader.jsx'
+import Home from '../../ui/pages/Home.jsx'
+import Example from '../../ui/pages/Example.jsx'
+import Settings from '../../ui/pages/Settings.jsx'
+import Account from '../../ui/pages/Account.jsx'
+import NotFound from '../../ui/pages/NotFound.jsx'
+import Signin from '../../ui/pages/Signin.jsx'
+import Signup from '../../ui/pages/Signup.jsx'
+import Signout from '../../ui/pages/Signout.jsx'
 
 Meteor.startup(() => {
   render(
@@ -40,9 +35,9 @@ Meteor.startup(() => {
         </Switch>
       </div>
     </Router>,
-    document.getElementById('root')
-  );
-});
+    document.getElementById('root'),
+  )
+})
 
 /**
  * ProtectedRoute (see React Router v4 sample)
@@ -53,7 +48,7 @@ const ProtectedRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={(props) => {
-      const isLogged = Meteor.userId() !== null;
+      const isLogged = Meteor.userId() !== null
       return isLogged ? (
         <Component {...props} />
       ) : (
@@ -63,11 +58,9 @@ const ProtectedRoute = ({ component: Component, ...rest }) => (
             state: { from: props.location },
           }}
         />
-      );
+      )
     }}
   />
-);
+)
 
-ProtectedRoute.propTypes = {
-  component: PropTypes.func.isRequired,
-};
+ProtectedRoute.propTypes = { component: PropTypes.func.isRequired }

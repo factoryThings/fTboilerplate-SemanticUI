@@ -1,4 +1,83 @@
 {
-  "plugins": ["meteor"],
-  "extends": ["plugin:meteor/recommended"]
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": "airbnb",
+  "plugins": ["react"],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "globals": {
+    "server": false,
+    "browser": false,
+    "expect": false
+  },
+  "rules": {
+    "import/no-unresolved": [
+      2,
+      {
+        "ignore": ["meteor"]
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "new-cap": [
+      "error",
+      {
+        "newIsCapExceptionPattern": "^fT",
+        "capIsNewExceptions": ["OneOf"]
+      }
+    ],
+    "no-console": [
+      "warn",
+      {
+        "allow": ["warn", "error", "info"]
+      }
+    ],
+    "linebreak-style": 0,
+    "object-curly-newline": ["error", { "multiline": true }],
+    "no-param-reassign": ["error", { "props": false }],
+    "max-len": ["error", { "code": 150 }],
+    "semi": ["error", "never"],
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "_id",
+          "_ensureIndex",
+          "_verifyEmailToken",
+          "_resetPasswordToken",
+          "_name",
+          "_options",
+          "_checkPassword",
+          "_execute",
+          "_hashLoginToken",
+          "_hashStampedToken",
+          "_tokenExpiration",
+          "_generateStampedLoginToken"
+        ]
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": 1,
+    "import/extensions": ["error", "ignorePackages"],
+    "react/jsx-one-expression-per-line" : 0,
+    "react/forbid-prop-types": [
+      "error",
+      {
+        "forbid": ["any", "array"]
+      }
+    ]
+  }
 }
