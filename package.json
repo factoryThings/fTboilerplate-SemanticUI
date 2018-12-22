@@ -17,11 +17,11 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "semantic-ui-css": "^2.4.0",
-    "semantic-ui-react": "^0.82.5"
+    "semantic-ui-react": "^0.84.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.6.1",
+    "eslint": "^5.10.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
