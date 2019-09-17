@@ -6,27 +6,27 @@
     "install-assets": "cp -fRv ./node_modules/semantic-ui-css/themes ./public/"
   },
   "dependencies": {
-    "@babel/runtime": "^7.1.2",
-    "bcrypt": "^3.0.1",
+    "@babel/runtime": "^7.6.0",
+    "bcrypt": "^3.0.6",
     "classnames": "^2.2.6",
     "meteor-node-stubs": "^0.4.1",
-    "prop-types": "^15.6.2",
-    "react": "^16.5.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
     "react-addons-pure-render-mixin": "^15.6.2",
-    "react-dom": "^16.5.2",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "semantic-ui-css": "^2.4.0",
-    "semantic-ui-react": "^0.84.0"
+    "react-dom": "^16.9.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.1"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.10.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-meteor": "^5.1.0",
-    "eslint-plugin-react": "^7.11.1"
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-meteor": "^6.0.0",
+    "eslint-plugin-react": "^7.14.3"
   },
   "eslintConfig": {
     "parserOptions": {
